@@ -36,9 +36,9 @@
 .container-fluid {
 
 	width: 100%;
-	height: 600px;
+	height: auto;
 	background-image: url(asi.jpg);
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	color: #FFFFFF;
@@ -50,7 +50,55 @@
 	height: 500px;
 	border-radius: 50px;
 	background-color:rgba(179,211,172,0.6);
-	margin: 50px 60px 0;
+	margin: 0 60px ;
+}
+
+/*top*/
+
+.box {
+	position: relative;
+	max-width: 1280px;
+	height: 600px;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 30px;
+}
+
+.box .bgimg {
+  position   : absolute;
+  background-position: center;
+  background-size: cover;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;
+}
+
+.box .src1 {
+	background-image: url(./cat-323262_1280.jpg);
+}
+.box .src2 {
+	background-image: url(./dwarf-spitz-386700_1280.jpg);
+	animation-delay: 5s;
+}
+.box .src3 {
+	background-image: url(./lop-eared-314881_1280.jpg);
+	animation-delay: 10s;
+}
+
+.box .src4 {
+	background-image: url(./hedgehog-468228_1280.jpg);
+	animation-delay: 15s;
+}
+
+@keyframes bgAnime {
+	0%{opacity: 0;}
+	5%{opacity: 1;}
+	25%{opacity: 1;}
+	30%{opacity: 0;}
+	100%{opacity: 0;}
 }
 
 /*nav*/
