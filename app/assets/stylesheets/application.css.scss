@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ @font-face {
+ 	font-family: 'pug';
+ 	src: url('pugnomincho-mini.otf') format('truetype');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+
+ @font-face {
+ 	font-family: 'pome';
+ 	src: url('Pomeranian-Regular.ttf') format('truetype');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+
+/*共通レイアウト*/
+
+.container-fluid {
+
+	width: 100%;
+	height: 600px;
+	background-image: url(asi.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #FFFFFF;
+	font-family: 'pome';
+}
+
+.background {
+	width: 90%;
+	height: 500px;
+	border-radius: 50px;
+	background-color:rgba(179,211,172,0.6);
+	margin: 50px 60px 0;
+}
+
+/*nav*/
+
+nav {
+	width: 100%;
+	height: 80px;
+ 	font-family: 'pome';
+ 	padding: 15px 20px;
+ }
+.navbar{
+	margin: 0;
+}
+
+.navbar-logo {
+    font-size: 35px;
+    color: #FFFFFF;
+}
+
+.nav_item {
+	color: #FFFFFF;
+}
+
+.navbar-nav {
+	font-size: 25px;
+	list-style: none;
+	float:right;
+	margin: 0;
+}
+
+/*footer*/
+
+footer{
+	color: #FFFFFF;
+	font-family: 'pome';
+	width: 100%;
+	text-align: center;
+	line-height: 70px;
+  height: 70px;
+}
+
+/*devise*/
+
+.login {
+
+}
+
+
+
+
+

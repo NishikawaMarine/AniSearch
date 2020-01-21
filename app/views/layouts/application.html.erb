@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AniSearch</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar" style="background-color: #e7e0aa;">
+          <% if admin_signed_in? %>
+            <!-- 管理者でログインしたとき  -->
+            <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
+            <ul class= "navbar-nav">
+              <li class= "nav_item">
+               <%= link_to "Log out",destroy_admin_session_path, method: :delete %>
+              </li>
+            </ul>
+          <% else %>
+            <!-- 管理者でログインしてないとき  -->
+            <%= link_to root_path do %>
+              <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
+            <% end %>
+            <ul class= "navbar-nav">
+              <li class= "nav_item search">
+              </li>
+              <li class= "nav_item">
+                <%= link_to "About", homes_about_path%>
+              </li>
+            </ul>
+          <% end %>
+        </ul>
+
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>
+      <p class= "text-center" style="background-color: #e7e0aa;">©︎ 2020  Ani<i class="fas fa-paw"></i>Search</p>
+    </footer>
+  </body>
+</html>
