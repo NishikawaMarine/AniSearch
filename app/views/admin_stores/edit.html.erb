@@ -1,1 +1,30 @@
-<h1>edit.html.erb</h1>
+<div class="container-fluid pb-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+    	<div class="background mt-4" style="height: 900px">
+				<h1 class="text-center pt-4">〜Edit〜</h1>
+					<div class="col-md-9 offset-md-2">
+						<%= form_for @store, url: admin_store_path do |f| %>
+							<h4>image</h4>
+							<%= attachment_image_tag @store, :image_id, :fill, 0, 0, format: 'jpg', fallback: "no_image.jpg", size:'200x150' %>
+							<%#= f.attachment_field :image %>
+							<h4>Store name</h4>
+							<%= f.text_field :store_name %>
+							<h4>phone number</h4>
+							<%= f.text_field :phone_number %>
+							<h4>business hours</h4>
+							<%= f.text_field :opening_hours %>
+							<h4>address</h4>
+							<%= f.text_field :address %>
+							<h4>Regular holiday</h4>
+							<%= f.text_field :regular_holiday %>
+							<h4>fee</h4>
+							<%= f.text_field :fee %>
+							<%= f.submit "Edit",class: "btn btn-light mt-3" %>
+						<% end %>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
