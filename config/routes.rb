@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :installs
   root 'homes#top'
   get 'homes/about'
-  get 'stores/index'
-  get 'stores/show'
+  resources :stores
+  resources :admin_stores
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

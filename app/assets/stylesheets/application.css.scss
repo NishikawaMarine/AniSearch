@@ -47,7 +47,7 @@
 
 .background {
 	width: 90%;
-	height: 500px;
+	height: auto;
 	border-radius: 50px;
 	background-color:rgba(179,211,172,0.6);
 	margin: 0 60px ;
@@ -140,10 +140,18 @@ footer{
   height: 70px;
 }
 
-/*devise*/
+/*about*/
 
-.login {
+.about_img {
+	background-position: center;
+	background-size: cover;
+	border-radius: 100px;
+}
 
+/*admin_top*/
+
+.table .center {
+ margin-top: 30px;
 }
 
 

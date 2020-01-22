@@ -1,0 +1,57 @@
+<div class="container-fluid pb-4 pt-4">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 ">
+    	<div class="background pt-4 pb-5 pl-5 mx-auto">
+				<h1 class="text-center pt-4">〜Cafe details〜</h1>
+				<div class="img ml-5">
+					<%= attachment_image_tag @store, :image_id, :fill, 800, 500, format: 'jpg', fallback: "no_image.jpg", size:"800x500",class: "ml-3 mt-3 mb-3" %></div>
+					<table class="table text-white h4" style="border-top: solid 2px white;">
+							<tbody>
+								<tr>
+									<th style="width: 150px;"></th>
+									<th style="width: 300px;">Store name</th>
+									<td><%= @store.store_name %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th>Phone number</th>
+									<td><%= @store.phone_number %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th>Opening hours</th>
+									<td><%= @store.opening_hours %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th>Address</th>
+									<td><%= @store.address %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th>Regular holiday</th>
+									<td><%= @store.regular_holiday %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th>Fee</th>
+									<td>30分 ¥<%= @store.fee %></td>
+								</tr>
+								<tr>
+									<th></th>
+									<th></th>
+									<td><%= link_to edit_admin_store_path(@store) do %>
+												<div class="btn btn-light btn-lg col-sm-5">Edit</div>
+											<% end %>
+											<%= link_to admin_store_path(@store), method: :delete, "data-confirm" => "本当に削除しますか？" do %>
+												<div class="btn btn-light btn-lg col-sm-5">Delete</div>
+											<% end %>
+									</td>
+								</tr>
+							</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
+
