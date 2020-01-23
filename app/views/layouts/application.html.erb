@@ -15,7 +15,7 @@
       <nav class="navbar" style="background-color: #e7e0aa;">
           <% if admin_signed_in? %>
             <!-- 管理者でログインしたとき  -->
-          <%= link_to admin_stores_path do %>
+          <%= link_to admin_stores_path, class: "text-white" do %>
             <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
           <% end %>
             <ul class= "navbar-nav">
@@ -25,7 +25,7 @@
             </ul>
           <% else %>
             <!-- 管理者でログインしてないとき  -->
-            <%= link_to root_path do %>
+            <%= link_to root_path, class: "text-white" do %>
               <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
             <% end %>
             <ul class= "navbar-nav">

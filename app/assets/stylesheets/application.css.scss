@@ -55,6 +55,11 @@
 
 /*top*/
 
+.card {
+	border-radius: 50px;
+	background-color:rgba(179,211,172,0.6);
+}
+
 .box {
 	position: relative;
 	max-width: 1280px;
@@ -115,11 +120,6 @@ nav {
 
 .navbar-logo {
     font-size: 35px;
-    color: #FFFFFF;
-}
-
-.nav_item {
-	color: #FFFFFF;
 }
 
 .navbar-nav {
