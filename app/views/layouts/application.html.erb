@@ -32,9 +32,9 @@
               <div class="flex-wrap d-flex justify-content-start">
               <li class= "search mt-3">
                 <%= form_with url: stores_path, method: :get, local: true do |form| %>
-                  <%= form.text_field :search,{size:"9"} %> x
-                  <%= form.text_field :search,{size:"9"} %>
-                  <%= form.submit 'Search', name: nil, class: "btn btn-light " %>
+                  <%= form.text_field :search,style: "border-radius: 50px; width: 200px;",class: "pl-3" %><span class="text-white"> x </span>
+                  <%= form.text_field :search,style: "border-radius: 50px; width: 200px;",class: "pl-3" %>
+                  <%= form.submit 'Search', name: nil, class: "btn btn-light ", style: "border-radius: 50px;" %>
                 <% end %>
               </li>
               <li class= "nav_item">
