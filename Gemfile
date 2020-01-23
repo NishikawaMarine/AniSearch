@@ -69,3 +69,4 @@ gem "refile-mini_magick"
 #gem 'font-awesome-rails'
 gem 'font-awesome-sass'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem 'pry-rails'

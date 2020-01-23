@@ -37,6 +37,18 @@
 									<th>Fee</th>
 									<td>30分 ¥<%= @store.fee %></td>
 								</tr>
+								<tr>
+									<th></th>
+									<th>Categories</th>
+									<td class="align-middle"style="width: 600px;">
+										<% @store.type_list.each do |type| %>
+											<span class="badge badge-info"><%= type %></span>
+										<% end %><br/>
+										<% @store.city_list.each do |city| %>
+											<span class="badge badge-info"><%= city %></span>
+										<% end %>
+									</td>
+								</tr>
 							</tbody>
 					</table>
 			</div>

@@ -13,7 +13,7 @@
   <body>
     <header class="sticky-top">
       <nav class="navbar" style="background-color: #e7e0aa;">
-          <% if admin_signed_in? %>
+        <% if admin_signed_in? %>
             <!-- 管理者でログインしたとき  -->
           <%= link_to admin_stores_path, class: "text-white" do %>
             <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
@@ -23,21 +23,26 @@
                <%= link_to "Log out",destroy_admin_session_path, method: :delete, class: "text-white" %>
               </li>
             </ul>
-          <% else %>
+        <% else %>
             <!-- 管理者でログインしてないとき  -->
             <%= link_to root_path, class: "text-white" do %>
               <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
             <% end %>
             <ul class= "navbar-nav">
-              <li class= "nav_item search">
+              <div class="flex-wrap d-flex justify-content-start">
+              <li class= "search mt-3">
+                <%= form_with url: stores_path, method: :get, local: true do |form| %>
+                  <%= form.text_field :search,{size:"9"} %> x
+                  <%= form.text_field :search,{size:"9"} %>
+                  <%= form.submit 'Search', name: nil, class: "btn btn-light " %>
+                <% end %>
               </li>
               <li class= "nav_item">
-                <%= link_to "About", homes_about_path, class: "text-white" %>
+                <%= link_to "About", homes_about_path, class: "text-white ml-5" %>
               </li>
+            </div>
             </ul>
-          <% end %>
-        </ul>
-
+        <% end %>
       </nav>
     </header>
     <%= yield %>

@@ -4,18 +4,24 @@
     	<div class="background mt-4 pt-4 pb-5">
 				<h1 class="text-center pt-4">〜Cafe list〜</h1>
 				<% @stores.each do |store| %>
-					<%= link_to admin_store_path(store) do %>
-						<table class="table text-white h5" style="border-top: solid 2px white;">
+					<%= link_to admin_store_path(store), class: "text-white" do %>
+						<table class="table text-white h4" style="border-top: solid 2px white;">
 							<tbody>
 								<tr>
-									<td><%= attachment_image_tag store, :image, :fill, 150, 100, format: 'jpg', fallback: "no_image.jpg", size:"150x100" %>
+									<td></td>
+									<td><%= attachment_image_tag store, :image, :fill, 250, 100, format: 'jpg', fallback: "no_image.jpg", size:"250x150" %>
 									</td>
-									<td class="align-middle"style="width: 200px;"><%= store.store_name %></td>
-									<td class="align-middle"style="width: 280px;"><%= store.phone_number %></td>
-									<td class="align-middle"style="width: 280px;"><%= store.opening_hours %></td>
-									<td class="align-middle"style="width: 100px;"><%= store.address %></td>
-									<td class="align-middle"style="width: 100px;"><%= store.regular_holiday %></td>
-									<td class="align-middle"style="width: 180px;">30分 ¥<%= store.fee %></td>
+									<td></td>
+									<td class="align-middle text-center"style="width: 300px;"><%= store.store_name %></td>
+									<td class="align-middle text-center"style="width: 300px;"><i class="fas fa-map-marker-alt mr-3"></i><%= store.address %></td>
+									<td class="align-middle "style="width: 600px;">
+										<% store.type_list.each do |type| %>
+											<span class="badge badge-info"><%= type %></span>
+										<% end %><br/>
+										<% store.city_list.each do |city| %>
+											<span class="badge badge-info"><%= city %></span>
+										<% end %>
+									</td>
 								</tr>
 							</tbody>
 						</table>

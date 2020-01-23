@@ -39,12 +39,24 @@
 								</tr>
 								<tr>
 									<th></th>
+									<th>Categories</th>
+									<td class="align-middle"style="width: 600px;">
+										<% @store.type_list.each do |type| %>
+											<span class="badge badge-info"><%= type %></span>
+										<% end %><br/>
+										<% @store.city_list.each do |city| %>
+											<span class="badge badge-info"><%= city %></span>
+										<% end %>
+									</td>
+								</tr>
+								<tr>
+									<th></th>
 									<th></th>
 									<td><%= link_to edit_admin_store_path(@store) do %>
-												<div class="btn btn-light btn-lg col-sm-5">Edit</div>
+												<div class="btn btn-info btn-lg col-sm-5 text-white">Edit</div>
 											<% end %>
 											<%= link_to admin_store_path(@store), method: :delete, "data-confirm" => "本当に削除しますか？" do %>
-												<div class="btn btn-light btn-lg col-sm-5">Delete</div>
+												<div class="btn btn-danger btn-lg col-sm-5 text-white">Delete</div>
 											<% end %>
 									</td>
 								</tr>

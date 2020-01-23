@@ -20,11 +20,14 @@
 								<div class="card-body ml-5">
 									<div class="card-text">
 										<h2><%= store.store_name %></h2>
-										<h4><%= store.phone_number %></h4>
-										<h4><%= store.opening_hours %></h4>
-										<h4><%= store.address %></h4>
-										<h4><%= store.regular_holiday %></h4>
-										<h4>30分 ¥<%= store.fee %></h4>
+										<h4><i class="fas fa-map-marker-alt mr-3"></i><%= store.address %>
+										</h4>
+										<% store.type_list.each do |type| %>
+											<span class="badge badge-info"><%= type %></span>
+										<% end %><br/>
+										<% store.city_list.each do |city| %>
+											<span class="badge badge-info"><%= city %></span>
+										<% end %>
 									</div>
 								</div>
 							</div>
