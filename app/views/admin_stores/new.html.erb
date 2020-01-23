@@ -1,13 +1,12 @@
 <div class="container-fluid pb-4">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-8 offset-md-2">
     	<div class="background mt-4" style="height: 900px">
 				<h1 class="text-center pt-4">〜New Post〜</h1>
-					<div class="col-md-9 offset-md-2">
+					<div class="col-md-9 offset-md-3">
 						<%= form_for @store, url: admin_stores_path do |f| %>
 							<h4>image</h4>
-							<%= attachment_image_tag @store, :image_id, :fill, 0, 0, format: 'jpg', fallback: "no_image.jpg", size:'200x150' %>
-							<%#= f.attachment_field :image %>
+							<%= f.attachment_field :image %>
 							<h4>Store name</h4>
 							<%= f.text_field :store_name %>
 							<h4>phone number</h4>
