@@ -4,7 +4,7 @@
       <div class="background pl-5 pt-5 mt-5 mb-5" style="height: 600px;">
         <div class="login ml-5 mt-5">
 
-        <h2>Log in</h2>
+        <h1>Log in</h1>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
@@ -25,7 +25,7 @@
           <% end %>
 
           <div class="actions">
-            <%= f.submit "Log in",class: "btn btn-light" %>
+            <%= f.submit "Log in",class: "btn btn-light mt-3 mb-4", style: "border-radius: 50px; width: 150px;" %>
           </div>
         <% end %>
 

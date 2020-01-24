@@ -2,6 +2,9 @@
   <div class="row">
     <div class="col-md-10 offset-md-1 ">
     	<div class="background pt-4 pb-5 mx-auto">
+    		<% if flash[:notice] %>
+    			<h4 class="text-info ml-5 pt-5"><%= flash[:notice] %></h4>
+    		<% end %>
 				<h1 class="text-center pt-4">〜Cafe details〜</h1>
 				<div class="img ml-5">
 					<%= attachment_image_tag @store, :image, :fill, 830, 500, format: 'jpg', fallback: "no_image.jpg", size:"830x500",class: "ml-5 mt-3 mb-3",style: "border-radius: 50px" %></div>
@@ -42,10 +45,10 @@
 									<th>Categories</th>
 									<td class="align-middle"style="width: 600px;">
 										<% @store.type_list.each do |type| %>
-											<span class="badge badge-info"><%= type %></span>
+											<span class="badge badge-info" style= "border-radius: 50px;"><%= type %></span>
 										<% end %><br/>
 										<% @store.city_list.each do |city| %>
-											<span class="badge badge-info"><%= city %></span>
+											<span class="badge badge-info" style= "border-radius: 50px;"><%= city %></span>
 										<% end %>
 									</td>
 								</tr>
@@ -53,10 +56,10 @@
 									<th></th>
 									<th></th>
 									<td><%= link_to edit_admin_store_path(@store) do %>
-												<div class="btn btn-info btn-lg col-sm-5 text-white">Edit</div>
+												<div class="btn btn-info btn-lg col-sm-5 text-white"style= "border-radius: 50px; width: 200px;">Edit</div>
 											<% end %>
 											<%= link_to admin_store_path(@store), method: :delete, "data-confirm" => "本当に削除しますか？" do %>
-												<div class="btn btn-danger btn-lg col-sm-5 text-white">Delete</div>
+												<div class="btn btn-danger btn-lg col-sm-5 text-white"style= "border-radius: 50px; width: 200px;">Delete</div>
 											<% end %>
 									</td>
 								</tr>

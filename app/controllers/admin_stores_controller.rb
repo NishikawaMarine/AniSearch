@@ -20,17 +20,21 @@ class AdminStoresController < ApplicationController
 	def create
 		@store = Store.new(store_params)
 		if @store.save
+		   flash[:notice] = "successfully!"
 		   redirect_to admin_stores_path
 		else
+			flash[:notice] = "error!!"
 			render action: :new
 		end
 	end
 
 	def update
-		if@store = Store.find(params[:id])
-		  @store.update(store_params)
+		@store = Store.find(params[:id])
+		if@store.update(store_params)
+		  flash[:notice] = "successfully!"
 		  redirect_to admin_store_path(@store)
 		else
+		  flash[:notice] = "error!!"
 		  render action: :edit
 		end
 	end
