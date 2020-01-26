@@ -30,7 +30,7 @@
 
 	width: 100%;
 	height: auto;
-	background-image: url(asi.jpg);
+	background-image: url(/images/asi.jpg);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -75,19 +75,19 @@
 }
 
 .box .src1 {
-	background-image: url(./cat-323262_1280.jpg);
+	background-image: url(/images/cat-323262_1280.jpg);
 }
 .box .src2 {
-	background-image: url(./dwarf-spitz-386700_1280.jpg);
+	background-image: url(/images/dwarf-spitz-386700_1280.jpg);
 	animation-delay: 5s;
 }
 .box .src3 {
-	background-image: url(./lop-eared-314881_1280.jpg);
+	background-image: url(/images/lop-eared-314881_1280.jpg);
 	animation-delay: 10s;
 }
 
 .box .src4 {
-	background-image: url(./hedgehog-468228_1280.jpg);
+	background-image: url(/images/hedgehog-468228_1280.jpg);
 	animation-delay: 15s;
 }
 
