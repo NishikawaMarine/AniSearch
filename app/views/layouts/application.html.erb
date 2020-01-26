@@ -20,7 +20,9 @@
           <% end %>
             <ul class= "navbar-nav">
               <li class= "nav_item">
-               <%= link_to "Log out",destroy_admin_session_path, method: :delete, class: "text-white" %>
+               <%= link_to destroy_admin_session_path, method: :delete, class: "text-white" do %>
+                <i class="fas fa-sign-out-alt fa-lg"></i>
+              <% end %>
               </li>
             </ul>
         <% else %>
@@ -32,8 +34,8 @@
               <div class="flex-wrap d-flex justify-content-start">
               <li class= "search mt-3">
                 <%= form_with url: stores_path, method: :get, local: true do |form| %>
-                  <%= form.text_field :search,style: "border-radius: 50px; width: 200px;",class: "pl-3" %><span class="text-white"> x </span>
-                  <%= form.text_field :search,style: "border-radius: 50px; width: 200px;",class: "pl-3" %>
+                  <%= form.text_field :tags,placeholder: "ねこカフェ,ねこ",style: "border-radius: 50px; width: 250px;",class: "pl-3" %><span class="text-white"> x </span>
+                  <%= form.text_field :address , placeholder: "東京都新宿",style: "border-radius: 50px; width: 250px;",class: "pl-3" %>
                   <%= form.submit 'Search', name: nil, class: "btn btn-light ", style: "border-radius: 50px;" %>
                 <% end %>
               </li>

@@ -15,7 +15,7 @@
 	    		<%= link_to store_path(store) , class: "text-white" do %>
 							<div class="card h5 ml-5 mt-5" style="width: 500px; border: solid 2px white;">
 								<div class="card-img-top">
-									<%= attachment_image_tag store, :image, :fill, 496, 300, format: 'jpg', fallback: "no_image.jpg", size:"496x300",style: "border-radius: 50px 50px 0 0;"  %>
+									<%= attachment_image_tag store, :image, :fill, 496, 300, format: 'jpg', fallback: "/images/no_image.jpg", size:"496x300",style: "border-radius: 50px 50px 0 0;"  %>
 								</div>
 								<div class="card-body ml-5">
 									<div class="card-text">
