@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
   </head>
 
@@ -31,25 +32,25 @@
               <span class="navbar-logo">Ani<i class="fas fa-paw faa-bounce animated"></i>Search</span>
             <% end %>
             <ul class= "navbar-nav">
-              <div class="flex-wrap d-flex justify-content-start">
-              <li class= "search mt-3">
+              <li class= "search mr-2">
                 <%= form_with url: stores_path, method: :get, local: true do |form| %>
-                  <%= form.text_field :tags,placeholder: "ねこカフェ,ねこ",style: "border-radius: 50px; width: 250px;",class: "pl-3" %><span class="text-white"> x </span>
-                  <%= form.text_field :address , placeholder: "東京都新宿",style: "border-radius: 50px; width: 250px;",class: "pl-3" %>
-                  <%= form.submit 'Search', name: nil, class: "btn btn-light ", style: "border-radius: 50px;" %>
+                  <%= form.text_field :tags,placeholder: "ねこカフェ",class: "search-tag" %><span class="text-white"> x </span>
+                  <%= form.text_field :address , placeholder: "東京都新宿",class: "search-address" %>
+                  <%= button_tag :type => "submit", name: nil, class: "btn btn-light text-white search-btn " do %>
+                    <i class="fas fa-search fa-2x"></i>
+                  <% end %>
                 <% end %>
               </li>
               <li class= "nav_item">
-                <%= link_to "About", homes_about_path, class: "text-white ml-5" %>
+                <%= link_to "About", homes_about_path, class: "text-white about-link" %>
               </li>
-            </div>
             </ul>
         <% end %>
       </nav>
     </header>
     <%= yield %>
     <footer>
-      <p class= "text-center" style="background-color: #e7e0aa;">©︎ 2020  Ani<i class="fas fa-paw"></i>Search</p>
+      <div class= "text-center footer">©︎ 2020  Ani<i class="fas fa-paw"></i>Search</div>
     </footer>
   </body>
 </html>

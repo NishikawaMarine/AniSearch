@@ -7,27 +7,30 @@
 	    	<div class="bgimg src3"></div>
 	    	<div class="bgimg src4"></div>
     	</div>
-    	<div class="background mt-4 mx-auto pt-5 pb-5 pl-5">
+    	<div class="background mt-4 mx-auto pt-5 pb-5">
 
-				<h1 class="text-center pt-4">〜Cafe list〜</h1>
+				<div class="top-title text-center pt-4">〜Cafe list〜</div>
 				<div class="flex-wrap d-flex justify-content-start">
 	    	<% @stores.each do |store| %>
 	    		<%= link_to store_path(store) , class: "text-white" do %>
-							<div class="card h5 ml-5 mt-5" style="width: 500px; border: solid 2px white;">
+							<div class="card mt-4">
 								<div class="card-img-top">
-									<%= attachment_image_tag store, :image, :fill, 496, 300, format: 'jpg', fallback: "/images/no_image.jpg", size:"496x300",style: "border-radius: 50px 50px 0 0;"  %>
+									<%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "card-img-top" %>
 								</div>
-								<div class="card-body ml-5">
+								<div class="card-body">
 									<div class="card-text">
-										<h2><%= store.store_name %></h2>
-										<h4><i class="fas fa-map-marker-alt mr-3"></i><%= store.address %>
-										</h4>
-										<% store.type_list.each do |type| %>
-											<span class="badge badge-info"><%= type %></span>
-										<% end %><br/>
-										<% store.city_list.each do |city| %>
-											<span class="badge badge-info"><%= city %></span>
-										<% end %>
+										<div class="card-text-name text-center"><%= store.store_name %></div>
+										<div class="card-text-address">
+											<i class="fas fa-map-marker-alt"></i><%= store.address %>
+										</div>
+										<div class="card-tag">
+											<% store.type_list.each do |type| %>
+												<span class="badge badge-info"><%= type %></span>
+											<% end %><br/>
+											<% store.city_list.each do |city| %>
+												<span class="badge badge-info"><%= city %></span>
+											<% end %>
+										</div>
 									</div>
 								</div>
 							</div>

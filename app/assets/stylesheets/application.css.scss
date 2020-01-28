@@ -43,14 +43,47 @@
 	height: auto;
 	border-radius: 50px;
 	background-color:rgba(179,211,172,0.6);
-	margin: 0 60px ;
+	margin: 0 auto ;
+	padding: 0 50px;
+ }
+
+.title{
+	font-size: 50px;
 }
 
 /*top*/
 
+.top-title{
+	font-size: 50px;
+}
+
 .card {
 	border-radius: 50px;
 	background-color:rgba(179,211,172,0.6);
+	width: 500px;
+	border: solid 2px white;
+	margin: 0 0 0 50px;
+	font-size: 25px;
+}
+
+.card-text-name{
+	font-size: 35px;
+}
+
+.card-text-address{
+	font-size: 25px;
+	margin: 0 50px 0;
+}
+
+.card-tag {
+	margin: 0 50px 0;
+}
+
+
+.card-img-top {
+	width: 496px;
+	height: 300px;
+	border-radius: 50px 50px 0 0;
 }
 
 .box {
@@ -105,24 +138,51 @@ nav {
 	width: 100%;
 	height: 80px;
  	font-family: 'niku';
- 	padding: 15px 20px;
  }
 .navbar{
 	margin: 0;
 }
 
 .navbar-logo {
-    font-size: 35px;
+  font-size: 40px;
+}
+
+.about-link{
+	font-size: 30px;
 }
 
 .navbar-nav {
 	font-size: 25px;
 	list-style: none;
-	margin: 0;
+	margin: 15px 0 0 30px;
+	display: inline
 }
 
 .nav_item {
-	padding: 15px 20px;
+	float:left;
+	margin: 0 30px;
+}
+
+.search  {
+	float:left;
+}
+
+.search-btn {
+	width: 80px;
+	height: 50px;
+	border-radius: 30px;
+	background-color: #e7e0aa;
+	border: solid 2px white;
+}
+
+.search-tag {
+	border-radius: 50px;
+	width: 250px;
+}
+
+.search-address {
+	border-radius: 50px;
+	width: 250px;
 }
 
 input::placeholder {
@@ -138,23 +198,397 @@ footer{
 	width: 100%;
 	text-align: center;
 	line-height: 70px;
-  	height: 70px;
+  height: 70px;
+  background-color: #e7e0aa;
 }
 
 /*about*/
 
-.about_img {
+.background-about {
+	height: 700px;
+}
+
+.about-title {
+	font-size: 35px;
+}
+
+.about-body{
+	font-size: 25px;
+}
+
+.about_img1 {
 	background-position: center;
 	background-size: cover;
 	border-radius: 100px;
+	width: 250px;
+	height: 200px;
+	background-image: url(/images/agriculture-84702_640.jpg);
+	float:left;
+}
+.about_img2 {
+	background-position: center;
+	background-size: cover;
+	border-radius: 100px;
+	width: 250px;
+	height: 200px;
+	background-image: url(/images/cat-3401683_640.jpg);
+	float:left;
+}
+.about_img3 {
+	background-position: center;
+	background-size: cover;
+	border-radius: 100px;
+	width: 250px;
+	height: 200px;
+	background-image: url(/images/pets-3715733_640.jpg);
+	float:left;
 }
 
-/*admin_top*/
-
-.table .center {
- 	margin-top: 30px;
+.about_img4 {
+	background-position: center;
+	background-size: cover;
+	border-radius: 100px;
+	width: 250px;
+	height: 200px;
+	background-image: url(/images/chicks-349035_640.jpg);
+	float:left;
 }
 
+/*show*/
+
+.show-img {
+	width: 830px;
+	height: 500px;
+	border-radius: 50px;
+	margin-left: 50px;
+}
+
+.show-body{
+	font-size: 30px;
+}
+
+.show-th {
+	width: 300px;
+}
+
+.show-td {
+	width: 500px;
+}
+
+/*admin_index*/
+
+.index-img {
+	width: 250px;
+	height: 150px;
+	border-radius: 50px;
+}
+
+.index-store-name {
+	width: 300px;
+	font-size: 30px;
+}
+
+.index-store-address {
+	width: 500px;
+	font-size: 20px;
+}
+
+.index-store-tag {
+	width: 320px;
+	font-size: 20px;
+}
+
+.btn-admin-index{
+	font-size: 30px;
+}
+
+/*admin_show*/
+
+.btn-admin-show {
+	border-radius: 50px;
+	width: 200px;
+}
+
+/*edit*/
+
+.background-edit {
+	height: 1000px;
+}
+
+.p{
+	font-size: 25px;
+}
+
+.btn-edit {
+	font-size: 25px;
+}
+
+/*new*/
+
+.background-new {
+	height: 1000px;
+}
+
+.p{
+	font-size: 25px;
+}
+
+.btn-post {
+	font-size: 25px;
+}
+
+/*login*/
+
+.background-login {
+	height: 550px;
+}
+
+.login {
+	margin: 0 auto;
+}
+
+.btn-login{
+	width: 150px;
+	margin-left: 150px;
+}
+
+.login-title{
+	font-size: 40px;
+}
+
+
+@media screen and (max-width:425px) {
+
+nav {
+	width: 100%;
+	height: 50px;
+ }
+
+.navbar-logo {
+   font-size: 15px;
+}
+
+.navbar-nav {
+	font-size: 25px;
+	margin: 0 ;
+	display: inline
+}
+
+.nav_item {
+	float:left;
+	margin: 0;
+}
+
+.search  {
+	margin-top: 10px;
+	float:left;
+	font-size: 10px;
+}
+
+.about-link{
+	font-size: 15px;
+}
+
+.search-tag {
+	width: 85px;
+	height: 20px;
+}
+
+.search-address {
+	width: 85px;
+	height: 20px;
+}
+
+.search-btn {
+	width: 40px;
+	font-size: 8px;
+	height: 25px;
+	border: solid 1px white;
+}
+
+input::placeholder {
+  font-size: 10px;
+}
+
+.container-fluid {
+	width: 100%;
+	font-size: 35px;
+}
+
+.background {
+	width: 100%;
+	height: auto;
+	padding: 0;
+}
+
+.top-title{
+	font-size: 30px;
+}
+
+.box {
+	max-width: 425px;
+	height: 300px;
+	margin: auto;
+}
+
+.card {
+	width: 173px;
+	border: solid 2px white;
+	margin: 0 0 0 17px;
+	font-size: 10px;
+}
+
+.card-text-name{
+	font-size: 15px;
+}
+
+.card-text-address{
+	font-size: 10px;
+	margin: 0 10px 0;
+}
+
+.card-tag {
+	margin: 0 10px 0;
+}
+
+.card-img-top {
+	width: 169px;
+	height: 110px;
+	border-radius: 50px 50px 0 0;
+}
+
+.show-img {
+	width: 350px;
+	height: 200px;
+	margin-left: 22px;
+}
+
+.title{
+	font-size: 25px;
+}
+.show-body{
+	font-size: 15px;
+}
+
+.background-about {
+	height: 500px;
+}
+
+.about-title {
+	font-size: 25px;
+}
+
+.about-body{
+	font-size: 15px;
+}
+
+.about_img1 {
+	width: 60px;
+	height: 50px;
+}
+
+.about_img2 {
+	width: 60px;
+	height: 50px;
+}
+
+.about_img3 {
+	width: 60px;
+	height: 50px;
+}
+
+.about_img4 {
+	width: 60px;
+	height: 50px;
+}
+
+/*admin_index*/
+
+.index-img {
+	width: 60px;
+	height: 40px;
+	border-radius: 50px;
+}
+
+.index-store-name {
+	width: 120px;
+	font-size: 10px;
+}
+
+.index-store-address {
+	width: 130px;
+	font-size: 10px;
+}
+
+.index-store-tag {
+	width: 100px;
+	font-size: 5px;
+}
+
+.btn-admin-index{
+	font-size: 10px;
+}
+
+/*admin_show*/
+
+.btn-admin-show {
+	border-radius: 50px;
+	width: 80px;
+	font-size: 15px;
+}
+
+/*edit*/
+
+.background-edit {
+	height: 900px;
+}
+
+.p{
+	font-size: 15px;
+	margin-left: 50px;
+}
+
+.btn-edit {
+	font-size: 15px;
+}
+
+/*new*/
+
+.background-new {
+	height: 900px;
+}
+
+.p{
+	font-size: 15px;
+	margin-left: 50px;
+}
+
+.btn-post {
+	font-size: 15px;
+}
+
+/*login*/
+
+.background-login {
+	height: 420px;
+}
+
+.login {
+	margin: 0 70px;
+}
+
+.btn-login{
+	width: 80px;
+	margin-left: 100px;
+}
+
+.login-title{
+	font-size: 25px;
+	margin-left: 30px;
+}
+
+
+}
 
 
 

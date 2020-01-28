@@ -1,32 +1,32 @@
 <div class="container-fluid pb-4">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-    	<div class="background mt-4" style="height: 900px">
+    	<div class="background background-edit mt-4">
     		<% if flash[:notice] %>
     			<h4 class="text-danger ml-5 pt-5"><%= flash[:notice] %></h4>
     		<% end %>
-				<h1 class="text-center pt-4">〜Edit〜</h1>
-					<div class="col-md-9 offset-md-3">
+				<div class="title text-center pt-4">〜Edit〜</div>
+					<div class="col-md-9 offset-md-2">
 						<%= form_for @store, url: admin_store_path do |f| %>
-							<h4>image</h4>
-							<%= f.attachment_field :image %>
-							<h4>Store name</h4>
-							<%= f.text_field :store_name %>
-							<h4>phone number</h4>
-							<%= f.text_field :phone_number %>
-							<h4>business hours</h4>
-							<%= f.text_field :opening_hours %>
-							<h4>address</h4>
-							<%= f.text_field :address %>
-							<h4>Regular holiday</h4>
-							<%= f.text_field :regular_holiday %>
-							<h4>fee</h4>
-							<%= f.text_field :fee %>
-							<h5>type_list タグをカンマ区切りで入力</h5>
-							<%= f.text_field :type_list, value: @store.type_list.join(',') %>
-							<h5>city_list タグをカンマ区切りで入力</h5>
-							<%= f.text_field :city_list, value: @store.city_list.join(',') %>
-							<%= f.submit "Edit",class: "btn btn-light btn-lg" %>
+							<div class="p">image</div>
+							<%= f.attachment_field :image,class: "p" %>
+							<div class="p">Store name</div>
+							<%= f.text_field :store_name,class: "p" %>
+							<div class="p">phone number</div>
+							<%= f.text_field :phone_number,class: "p" %>
+							<div class="p">business hours</div>
+							<%= f.text_field :opening_hours,class: "p" %>
+							<div class="p">address</div>
+							<%= f.text_field :address,class: "p" %>
+							<div class="p">Regular holiday</div>
+							<%= f.text_field :regular_holiday,class: "p" %>
+							<div class="p">fee</div>
+							<%= f.text_field :fee,class: "p" %>
+							<div class="p">type_list タグをカンマ区切りで入力</div>
+							<%= f.text_field :type_list, value: @store.type_list.join(','),class: "p" %>
+							<div class="p">city_list タグをカンマ区切りで入力</div>
+							<%= f.text_field :city_list, value: @store.city_list.join(','),class: "p" %>
+							<%= f.submit "Edit",class: "btn-edit btn btn-light btn-lg ml-3" %>
 						<% end %>
 					</div>
 			</div>

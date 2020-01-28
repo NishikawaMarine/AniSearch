@@ -1,46 +1,39 @@
 <div class="container-fluid pb-4 pt-4">
   <div class="row">
-    <div class="col-md-10 offset-md-1 ">
+    <div class="col-md-10 offset-md-1">
     	<div class="background pt-4 pb-5 mx-auto">
-				<h1 class="text-center pt-4">〜Cafe details〜</h1>
-				<div class="img ml-5">
-					<%= attachment_image_tag @store, :image, :fill, 830, 500, format: 'jpg', fallback: "/images/no_image.jpg", size:"830x500",class: "ml-5 mt-3 mb-3",style: "border-radius: 50px" %></div>
-					<table class="table text-white h4" style="border-top: solid 2px white;">
+				<div class="title text-center pt-4">〜Cafe details〜</div>
+				<div class="img">
+					<%= attachment_image_tag @store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "mt-3 mb-3 show-img" %></div>
+					<table class="table text-white show-body" style="border-top: solid 2px white;">
 							<tbody>
 								<tr>
-									<th style="width: 150px;"></th>
-									<th style="width: 300px;">Store name</th>
-									<td><%= @store.store_name %></td>
+									<th class="show-th">Store name</th>
+									<td class="show-td"><%= @store.store_name %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Phone number</th>
 									<td><%= @store.phone_number %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Opening hours</th>
 									<td><%= @store.opening_hours %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Address</th>
 									<td><%= @store.address %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Regular holiday</th>
 									<td><%= @store.regular_holiday %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Fee</th>
 									<td>30分 ¥<%= @store.fee %></td>
 								</tr>
 								<tr>
-									<th></th>
 									<th>Categories</th>
-									<td class="align-middle"style="width: 600px;">
+									<td class="align-middle">
 										<% @store.type_list.each do |type| %>
 											<span class="badge badge-info"><%= type %></span>
 										<% end %><br/>
