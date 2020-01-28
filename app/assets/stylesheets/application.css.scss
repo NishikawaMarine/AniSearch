@@ -298,6 +298,10 @@ footer{
 	font-size: 20px;
 }
 
+.successfully-text {
+	font-size: 40px;
+}
+
 .btn-admin-index{
 	font-size: 30px;
 }
@@ -307,6 +311,10 @@ footer{
 .btn-admin-show {
 	border-radius: 50px;
 	width: 200px;
+}
+
+.successfully-text {
+	font-size: 40px;
 }
 
 /*edit*/
@@ -323,6 +331,11 @@ footer{
 	font-size: 25px;
 }
 
+.error-text {
+	font-size: 40px;
+}
+
+
 /*new*/
 
 .background-new {
@@ -336,6 +349,11 @@ footer{
 .btn-post {
 	font-size: 25px;
 }
+
+.error-text {
+	font-size: 40px;
+}
+
 
 /*login*/
 
@@ -355,7 +373,6 @@ footer{
 .login-title{
 	font-size: 40px;
 }
-
 
 @media screen and (max-width:425px) {
 
@@ -525,6 +542,10 @@ input::placeholder {
 	font-size: 5px;
 }
 
+.successfully-text {
+	font-size: 25px;
+}
+
 .btn-admin-index{
 	font-size: 10px;
 }
@@ -537,10 +558,14 @@ input::placeholder {
 	font-size: 15px;
 }
 
+.successfully-text {
+	font-size: 25px;
+}
+
 /*edit*/
 
 .background-edit {
-	height: 900px;
+	height: 850px;
 }
 
 .p{
@@ -552,10 +577,14 @@ input::placeholder {
 	font-size: 15px;
 }
 
+.error-text {
+	font-size: 25px;
+}
+
 /*new*/
 
 .background-new {
-	height: 900px;
+	height: 850px;
 }
 
 .p{
@@ -565,6 +594,10 @@ input::placeholder {
 
 .btn-post {
 	font-size: 15px;
+}
+
+.error-text {
+	font-size: 25px;
 }
 
 /*login*/
