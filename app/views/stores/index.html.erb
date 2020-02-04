@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
     	<div class="background mt-5 mx-auto pt-4 pb-5">
-				<div class="title text-center pt-4">〜Search list〜</div>
+				<div class="title text-center pt-4">Search list<i class="fas fa-paw ml-3"></i></div>
 				<div class="flex-wrap d-flex justify-content-start">
 		    	<% @stores.each do |store| %>
 		    		<%= link_to store_path(store) , class: "text-white" do %>
@@ -18,10 +18,10 @@
 											</div>
 											<div class="card-tag">
 												<% store.type_list.each do |type| %>
-													<span class="badge badge-info"><%= type %></span>
+													<span class="badge tag"><%= type %></span>
 												<% end %><br/>
 												<% store.city_list.each do |city| %>
-													<span class="badge badge-info"><%= city %></span>
+													<span class="badge tag"><%= city %></span>
 												<% end %>
 											</div>
 										</div>

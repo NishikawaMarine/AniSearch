@@ -1,7 +1,7 @@
 class StoresController < ApplicationController
   def index
   	# @stores = Store.all
-  	# @stores = @stores.where('address LIKE ?', "%#{params[:address]}%") if params[:address] 
+  	# @stores = @stores.where('address LIKE ?', "%#{params[:address]}%") if params[:address]
     @tags = Store.tagged_with(params[:tags])
 
 	@stores = []
@@ -11,10 +11,12 @@ class StoresController < ApplicationController
 		end
     end
     @stores
-    # @stores = @stores && @tags
+    #@stores = @stores && @tags
   end
+
   def show
   	@store = Store.find(params[:id])
   end
+
 
 end

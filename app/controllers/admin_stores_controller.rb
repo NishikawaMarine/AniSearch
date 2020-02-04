@@ -14,7 +14,7 @@ class AdminStoresController < ApplicationController
 	end
 
 	def index
-		@stores = Store.all
+		@stores = Store.paginate(page: params[:page], per_page: 5).order(created_at: 'desc')
 	end
 
 	def create

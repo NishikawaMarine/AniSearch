@@ -73,3 +73,4 @@ gem 'pry-rails'
 group :production do
   gem 'mysql2'
 end
+gem 'will_paginate'

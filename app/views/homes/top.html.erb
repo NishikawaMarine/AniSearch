@@ -9,34 +9,35 @@
     	</div>
     	<div class="background mt-4 mx-auto pt-5 pb-5">
 
-				<div class="top-title text-center pt-4">〜Cafe list〜</div>
+				<div class="top-title text-center pt-4">Cafe list<i class="fas fa-paw ml-3"></i></div>
 				<div class="flex-wrap d-flex justify-content-start">
-	    	<% @stores.each do |store| %>
-	    		<%= link_to store_path(store) , class: "text-white" do %>
-							<div class="card mt-4">
-								<div class="card-img-top">
-									<%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "card-img-top" %>
-								</div>
-								<div class="card-body">
-									<div class="card-text">
-										<div class="card-text-name text-center"><%= store.store_name %></div>
-										<div class="card-text-address">
-											<i class="fas fa-map-marker-alt"></i><%= store.address %>
-										</div>
-										<div class="card-tag">
-											<% store.type_list.each do |type| %>
-												<span class="badge badge-info"><%= type %></span>
-											<% end %><br/>
-											<% store.city_list.each do |city| %>
-												<span class="badge badge-info"><%= city %></span>
-											<% end %>
+		    	<% @stores.each do |store| %>
+		    		<%= link_to store_path(store) , class: "text-white" do %>
+								<div class="card mt-4">
+									<div class="card-img-top">
+										<%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "card-img-top" %>
+									</div>
+									<div class="card-body">
+										<div class="card-text">
+											<div class="card-text-name text-center"><%= store.store_name %></div>
+											<div class="card-text-address">
+												<i class="fas fa-map-marker-alt"></i><%= store.address %>
+											</div>
+											<div class="card-tag">
+												<% store.type_list.each do |type| %>
+													<span class="badge tag"><%= type %></span>
+												<% end %><br/>
+												<% store.city_list.each do |city| %>
+													<span class="badge tag"><%= city %></span>
+												<% end %>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+						<% end %>
 					<% end %>
-				<% end %>
-			</div>
+				</div>
+				<%= will_paginate @stores, previous_label: '<', next_label: '>' %>
 			</div>
 		</div>
 	</div>

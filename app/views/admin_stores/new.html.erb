@@ -1,11 +1,11 @@
 <div class="container-fluid pb-4">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-    	<div class="background background-new mt-4">
+    	<div class="background background-new mt-4 pb-5">
     		<% if flash[:notice] %>
-    			<div class="error-text text-danger ml-5 pt-5"><%= flash[:notice] %></div>
+    			<div class="error-text text-danger ml-5 pt-4"><%= flash[:notice] %></div>
     		<% end %>
-				<div class="title text-center pt-4">〜New Post〜</div>
+				<div class="title text-center pt-4">New Post</div>
 					<div class="col-md-9 offset-md-2">
 						<%= form_for @store, url: admin_stores_path do |f| %>
 							<div class="p">image</div>

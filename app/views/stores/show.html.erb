@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-10 offset-md-1">
     	<div class="background pt-4 pb-5 mx-auto">
-				<div class="title text-center pt-4">〜Cafe details〜</div>
+				<div class="title text-center pt-4">Cafe details<i class="fas fa-paw ml-3"></i></div>
 				<div class="img">
 					<%= attachment_image_tag @store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "mt-3 mb-3 show-img" %></div>
 					<table class="table text-white show-body" style="border-top: solid 2px white;">
@@ -35,10 +35,10 @@
 									<th>Categories</th>
 									<td class="align-middle">
 										<% @store.type_list.each do |type| %>
-											<span class="badge badge-info"><%= type %></span>
+											<span class="badge tag"><%= type %></span>
 										<% end %><br/>
 										<% @store.city_list.each do |city| %>
-											<span class="badge badge-info"><%= city %></span>
+											<span class="badge tag"><%= city %></span>
 										<% end %>
 									</td>
 								</tr>

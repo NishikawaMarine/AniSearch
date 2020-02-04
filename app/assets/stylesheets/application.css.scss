@@ -62,8 +62,12 @@
 	background-color:rgba(179,211,172,0.6);
 	width: 500px;
 	border: solid 2px white;
-	margin: 0 0 0 50px;
+	margin: 0 0 20px 50px;
 	font-size: 25px;
+}
+
+.card:hover {
+  transform:scale(1.1,1.1);
 }
 
 .card-text-name{
@@ -77,6 +81,10 @@
 
 .card-tag {
 	margin: 0 50px 0;
+}
+
+.tag {
+	background-color: #afd0ef;
 }
 
 
@@ -132,6 +140,62 @@
 	100%{opacity: 0;}
 }
 
+.pagination {
+	justify-content: center;
+  height: 60px;
+  margin: 50px auto 0;
+}
+
+.pagination a {
+  background-color: #b2d6d4;
+  text-decoration: none;
+  font-family: 'niku';
+}
+
+.pagination * {
+	width: 60px;
+  color: white;
+  margin: 0 7px;
+  text-decoration: none;
+  padding: 20px 20px;
+  border-radius: 30px;
+  font-family: 'niku';
+  text-align: center;
+}
+
+.current {
+  font-style: normal;
+  color: white;
+  background: #93c9ff;
+  border-radius: 30px;
+  font-family: 'niku';
+}
+
+.pagination a:hover {
+  background: #93c9ff;
+  color: white;
+  animation: round 0.4s;
+}
+
+.pagination .disabled {
+  color: white;
+  padding: 20px 20px;
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  font-family: 'niku';
+}
+
+@keyframes round {
+	0% {transform:translateY(5px);}
+	20% {transform:translateY(-5px);}
+	40% {transform:translateY(-15px);}
+	60% {transform:rotate(30deg);}
+	80% {transform:rotate(-30deg);}
+	100% {transform:rotate(40deg);}
+}
+
+
+
 /*nav*/
 
 nav {
@@ -147,14 +211,44 @@ nav {
   font-size: 40px;
 }
 
+.navbar-logo:hover {
+  transform:scale(1.1,1.2);
+}
+
 .about-link{
-	font-size: 30px;
+	font-size: 35px;
+	margin-top: 10px;
+}
+
+.about-link:hover {
+  transform:scale(1.1,1.1);
+}
+
+.post-link{
+	border: 2px solid #FFFFFF;
+	font-size: 35px;
+	padding: 0 10px;
+	border-radius: 50px;
+}
+
+.post-link:hover {
+  transform:scale(1.1,1.1);
+}
+
+
+.logout-icon{
+	font-size: 40px;
+	margin: 15px 0 0 10px;
+}
+
+.logout-icon:hover {
+  transform:scale(1.2,1.2);
 }
 
 .navbar-nav {
 	font-size: 25px;
 	list-style: none;
-	margin: 15px 0 0 30px;
+	margin: 0 30px;
 	display: inline
 }
 
@@ -173,6 +267,10 @@ nav {
 	border-radius: 30px;
 	background-color: #e7e0aa;
 	border: solid 2px white;
+}
+
+.search-btn:hover {
+  transform:scale(1.1,1.1);
 }
 
 .search-tag {
@@ -195,10 +293,11 @@ input::placeholder {
 footer{
 	color: #FFFFFF;
 	font-family: 'niku';
+	font-size: 20px;
 	width: 100%;
 	text-align: center;
-	line-height: 70px;
-  height: 70px;
+	line-height: 80px;
+  height: 80px;
   background-color: #e7e0aa;
 }
 
@@ -302,15 +401,31 @@ footer{
 	font-size: 40px;
 }
 
-.btn-admin-index{
-	font-size: 30px;
+table.table-index tr:hover {
+	background-color: rgba(178,214,212,0.6);
+	color: #FFFFFF;
 }
 
 /*admin_show*/
 
-.btn-admin-show {
+.btn-show-edit {
 	border-radius: 50px;
 	width: 200px;
+	background-color: #9ac29f;
+}
+
+.btn-show-edit:hover {
+  transform:scale(1.1,1.1);
+}
+
+.btn-Delete {
+	border-radius: 50px;
+	width: 200px;
+	background-color: #d7847e;
+}
+
+.btn-Delete:hover {
+  transform:scale(1.1,1.1);
 }
 
 .successfully-text {
@@ -319,16 +434,17 @@ footer{
 
 /*edit*/
 
-.background-edit {
-	height: 1000px;
-}
-
 .p{
 	font-size: 25px;
 }
 
 .btn-edit {
 	font-size: 25px;
+	border-radius: 50px;
+}
+
+.btn-edit:hover {
+  transform:scale(1.1,1.1);
 }
 
 .error-text {
@@ -338,16 +454,17 @@ footer{
 
 /*new*/
 
-.background-new {
-	height: 1000px;
-}
-
 .p{
 	font-size: 25px;
 }
 
 .btn-post {
 	font-size: 25px;
+	border-radius: 50px;
+}
+
+.btn-post:hover {
+  transform:scale(1.1,1.1);
 }
 
 .error-text {
@@ -406,6 +523,18 @@ nav {
 
 .about-link{
 	font-size: 15px;
+	margin-top: 10px;
+}
+
+.post-link{
+	border: 1px solid #FFFFFF;
+	font-size: 15px;
+	padding: 0 8px;
+}
+
+.logout-icon{
+	font-size: 20px;
+	margin: 10px 0 0 20px;
 }
 
 .search-tag {
@@ -427,6 +556,14 @@ nav {
 
 input::placeholder {
   font-size: 10px;
+}
+
+/*footer*/
+
+footer{
+	font-size: 10px;
+	line-height: 40px;
+  height: 40px;
 }
 
 /*共通レイアウト*/
@@ -460,7 +597,6 @@ input::placeholder {
 
 .card {
 	width: 173px;
-	border: solid 2px white;
 	margin: 0 0 0 17px;
 	font-size: 10px;
 }
@@ -481,7 +617,23 @@ input::placeholder {
 .card-img-top {
 	width: 169px;
 	height: 110px;
-	border-radius: 50px 50px 0 0;
+}
+
+.pagination {
+  height: 25px;
+  margin: 20px auto 0;
+}
+
+.pagination * {
+	width: 30px;
+  margin: 0 3px;
+  padding: 5px 5px;
+  font-size: 10px;
+}
+
+.pagination .disabled {
+  padding: 5px 5px;
+  border: 1px solid #FFFFFF;
 }
 
 /*show*/
@@ -563,9 +715,13 @@ input::placeholder {
 
 /*admin_show*/
 
-.btn-admin-show {
-	border-radius: 50px;
-	width: 80px;
+.btn-show-edit {
+	width: 90px;
+	font-size: 15px;
+}
+
+.btn-Delete {
+	width: 90px;
 	font-size: 15px;
 }
 
@@ -574,10 +730,6 @@ input::placeholder {
 }
 
 /*edit*/
-
-.background-edit {
-	height: 850px;
-}
 
 .p{
 	font-size: 15px;
@@ -593,10 +745,6 @@ input::placeholder {
 }
 
 /*new*/
-
-.background-new {
-	height: 850px;
-}
 
 .p{
 	font-size: 15px;
@@ -614,7 +762,7 @@ input::placeholder {
 /*login*/
 
 .background-login {
-	height: 420px;
+	height: 450px;
 }
 
 .login {

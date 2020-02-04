@@ -3,12 +3,12 @@
     <div class="col-md-12 ">
     	<div class="background mt-4 pt-4 pb-5">
     		<% if flash[:notice] %>
-    			<div class="successfully-text text-info ml-5 pt-5"><%= flash[:notice] %></div>
+    			<div class="successfully-text text-info ml-5 pt-4"><%= flash[:notice] %></div>
     		<% end %>
-				<div class="title text-center pt-4">〜Cafe list〜</div>
+				<div class="title text-center pt-4">Cafe list<i class="fas fa-paw ml-3"></i></div>
 				<% @stores.each do |store| %>
 					<%= link_to admin_store_path(store), class: "text-white" do %>
-						<table class="table text-white" style="border-top: solid 2px white;">
+						<table class="table table-index table-hover text-white" style="border-top: solid 2px white;">
 							<tbody>
 								<tr>
 									<td><%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "index-img" %>
@@ -17,10 +17,10 @@
 									<td class="align-middle text-center index-store-address"><i class="fas fa-map-marker-alt mr-3"></i><%= store.address %></td>
 									<td class="align-middle index-store-tag">
 										<% store.type_list.each do |type| %>
-											<span class="badge badge-info"><%= type %></span>
+											<span class="badge tag"><%= type %></span>
 										<% end %><br/>
 										<% store.city_list.each do |city| %>
-											<span class="badge badge-info"><%= city %></span>
+											<span class="badge tag"><%= city %></span>
 										<% end %>
 									</td>
 								</tr>
@@ -28,9 +28,8 @@
 						</table>
 					<% end %>
 				<% end %>
-				<%= link_to new_admin_store_path(@store) do %>
-					<div class="btn btn-light btn-lg btn-block mt-5 mb-5 btn-admin-index"style= "border-radius: 50px;">New Post</div>
-				<% end %>
+				<%= will_paginate @stores, previous_label: '<', next_label: '>' %>
+				
 			</div>
 		</div>
 	</div>
