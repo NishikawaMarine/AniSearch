@@ -26,13 +26,21 @@
 
 /*共通レイアウト*/
 a:hover {
- text-decoration:none;
+	text-decoration:none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container-fluid {
 
 	width: 100%;
 	height: auto;
+	min-height: 100%;
+	position: relative;
 	background-image: url(/images/asi.jpg);
 	background-position: center;
 	background-size: cover;
@@ -107,15 +115,15 @@ a:hover {
 }
 
 .box .bgimg {
-  position   : absolute;
-  background-position: center;
-  background-size: cover;
-  top        : 0;
-  left       : 0;
-  bottom     : 0;
-  right      : 0;
-  opacity    : 0;
-  animation  : bgAnime 20s infinite;
+    position   : absolute;
+    background-position: center;
+    background-size: cover;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation  : bgAnime 20s infinite;
 }
 
 .box .src1 {
@@ -145,47 +153,47 @@ a:hover {
 
 .pagination {
 	justify-content: center;
-  height: 60px;
-  margin: 50px auto 0;
+    height: 60px;
+    margin: 50px auto 0;
 }
 
 .pagination a {
-  background-color: #b2d6d4;
-  text-decoration: none;
-  font-family: 'niku';
+    background-color: #b2d6d4;
+    text-decoration: none;
+    font-family: 'niku';
 }
 
 .pagination * {
 	width: 60px;
-  color: white;
-  margin: 0 7px;
-  text-decoration: none;
-  padding: 20px 20px;
-  border-radius: 30px;
-  font-family: 'niku';
-  text-align: center;
+	color: white;
+    margin: 0 7px;
+    text-decoration: none;
+    padding: 20px 20px;
+    border-radius: 30px;
+    font-family: 'niku';
+    text-align: center;
 }
 
 .current {
-  font-style: normal;
-  color: white;
-  background: #93c9ff;
-  border-radius: 30px;
-  font-family: 'niku';
+	font-style: normal;
+	color: white;
+	background: #93c9ff;
+	border-radius: 30px;
+	font-family: 'niku';
 }
 
 .pagination a:hover {
-  background: #93c9ff;
-  color: white;
-  animation: round 0.4s;
+	background: #93c9ff;
+	color: white;
+	animation: round 0.4s;
 }
 
 .pagination .disabled {
-  color: white;
-  padding: 20px 20px;
-  border: 2px solid #FFFFFF;
-  border-radius: 30px;
-  font-family: 'niku';
+	color: white;
+	padding: 20px 20px;
+	border: 2px solid #FFFFFF;
+	border-radius: 30px;
+	font-family: 'niku';
 }
 
 @keyframes round {
@@ -205,17 +213,18 @@ nav {
 	width: 100%;
 	height: 80px;
  	font-family: 'niku';
+ 	background-color: #e7e0aa;
  }
 .navbar{
 	margin: 0;
 }
 
 .navbar-logo {
-  font-size: 40px;
+	font-size: 40px;
 }
 
 .navbar-logo:hover {
-  transform:scale(1.1,1.2);
+	transform:scale(1.1,1.2);
 }
 
 .about-link{
@@ -224,7 +233,7 @@ nav {
 }
 
 .about-link:hover {
-  transform:scale(1.1,1.1);
+	transform:scale(1.1,1.1);
 }
 
 .post-link{
@@ -235,7 +244,7 @@ nav {
 }
 
 .post-link:hover {
-  transform:scale(1.1,1.1);
+	transform:scale(1.1,1.1);
 }
 
 
@@ -273,7 +282,7 @@ nav {
 }
 
 .search-btn:hover {
-  transform:scale(1.1,1.1);
+	transform:scale(1.1,1.1);
 }
 
 .search-tag {
@@ -287,8 +296,8 @@ nav {
 }
 
 input::placeholder {
-  color: #dfe0d8;
-  font-size: 20px;
+	color: #dfe0d8;
+ 	font-size: 20px;
 }
 
 /*footer*/
@@ -300,8 +309,8 @@ footer{
 	width: 100%;
 	text-align: center;
 	line-height: 80px;
-  height: 80px;
-  background-color: #e7e0aa;
+  	height: 80px;
+  	background-color: #e7e0aa;
 }
 
 /*about*/
@@ -367,6 +376,7 @@ footer{
 
 .show-body{
 	font-size: 30px;
+	border-top: solid 2px white;
 }
 
 .show-th {
@@ -404,6 +414,10 @@ footer{
 	font-size: 40px;
 }
 
+.table-index {
+	border-top: solid 2px white;
+}
+
 table.table-index tr:hover {
 	background-color: rgba(178,214,212,0.6);
 	color: #FFFFFF;
@@ -434,6 +448,12 @@ table.table-index tr:hover {
 .successfully-text {
 	font-size: 40px;
 }
+
+.show-body{
+	font-size: 30px;
+	border-top: solid 2px white;
+}
+
 
 /*edit*/
 

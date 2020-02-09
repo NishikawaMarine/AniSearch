@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 名前
 
-Things you may want to cover:
+AniSearch
 
-* Ruby version
+## 概要
 
-* System dependencies
+動物カフェ検索サイト
 
-* Configuration
+動物カフェが好きでよく行くのですが、最近動物カフェが流行って増えていっている中で
+動物カフェの検索サイトがあまり無いと思い、この検索サイトを考案しました。
+そして検索サイトがあることによって、動物カフェに行きたい人たちの選択肢が
+もっと増えたら良いなと思います。
 
-* Database creation
+## 機能
 
-* Database initialization
+rails 5.2.4
 
-* How to run the test suite
+検索機能,タグ機能,管理者用投稿機能&編集
 
-* Services (job queues, cache servers, search engines, etc.)
+## 使い方
 
-* Deployment instructions
+ 動物カフェのタイプと場所で絞り込んで検索することができます。
+ (例：猫カフェ×東京都で検索 → 東京都にある猫カフェが検索一覧で表示される)
 
-* ...
+ 検索一覧で表示された、お店の情報の部分をクリックするとお店の詳細な情報が見れます。
+
+ またトップ画面に戻りたいときは、サイト名の(AniSearch)の部分を押すと戻れます。
+ トップ画面も検索一覧と同様、お店情報の部分をクリックと詳細な情報が見れます。
+
+ 管理者画面の方ではログインした後、ヘッダーにある(Newpost)のボタンを押すと新規投稿画面になり
+ お店情報を投稿できるようになっています。
+
+ また編集したい時は、一覧画面からお店の情報をクリックし詳細画面にいきます。
+ 詳細画面には(Edit)ボタンと(Delete)ボタンがあるので、そこから編集と削除ができます。
+ トップ画面に戻りたいときは、先程と同様サイト名の(AniSearch)の部分を押すと戻れます。
+
+## URL
+
+(http://18.176.71.255/)
+
+## 作者
+
+西川　毬音

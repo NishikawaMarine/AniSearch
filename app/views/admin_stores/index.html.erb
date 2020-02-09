@@ -8,7 +8,7 @@
 				<div class="title text-center pt-4">Cafe list<i class="fas fa-paw ml-3"></i></div>
 				<% @stores.each do |store| %>
 					<%= link_to admin_store_path(store), class: "text-white" do %>
-						<table class="table table-index table-hover text-white" style="border-top: solid 2px white;">
+						<table class="table table-index table-hover text-white">
 							<tbody>
 								<tr>
 									<td><%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "index-img" %>
@@ -29,7 +29,6 @@
 					<% end %>
 				<% end %>
 				<%= will_paginate @stores, previous_label: '<', next_label: '>' %>
-				
 			</div>
 		</div>
 	</div>

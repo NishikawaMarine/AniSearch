@@ -14,7 +14,7 @@
   <body>
 
     <header class="sticky-top">
-      <nav class="navbar" style="background-color: #e7e0aa;">
+      <nav class="navbar">
         <% if admin_signed_in? %>
             <!-- 管理者でログインしたとき  -->
           <%= link_to admin_stores_path, class: "text-white" do %>
@@ -55,7 +55,7 @@
       </nav>
     </header>
     <%= yield %>
-    <footer>
+    <footer >
       <div class= "text-center footer">©︎ 2020  Ani<i class="fas fa-paw"></i>Search</div>
     </footer>
   </body>

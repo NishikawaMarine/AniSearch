@@ -11,21 +11,21 @@
 							<div class="p">image</div>
 							<%= f.attachment_field :image,class: "p" %>
 							<div class="p">Store name</div>
-							<%= f.text_field :store_name,class: "p" %>
+							<%= f.text_field :store_name, placeholder: "ねこのいえ",class: "p" %>
 							<div class="p">phone number</div>
-							<%= f.text_field :phone_number,class: "p" %>
+							<%= f.text_field :phone_number, placeholder: "000-0000-0000",class: "p" %>
 							<div class="p">business hours</div>
-							<%= f.text_field :opening_hours,class: "p" %>
+							<%= f.text_field :opening_hours, placeholder: "AM10:00〜PM9:00",class: "p" %>
 							<div class="p">address</div>
-							<%= f.text_field :address,class: "p" %>
+							<%= f.text_field :address, placeholder: "東京都新宿区新宿2-2-2",class: "p" %>
 							<div class="p">Regular holiday</div>
-							<%= f.text_field :regular_holiday,class: "p" %>
-							<div class="p">fee</div>
-							<%= f.text_field :fee,class: "p" %>
+							<%= f.text_field :regular_holiday, placeholder: "年中無休",class: "p" %>
+							<div class="p">fee ¥(30分単位)</div>
+							<%= f.text_field :fee, placeholder: "500",class: "p" %>
 							<div class="p">type_list タグをカンマ区切りで入力</div>
-							<%= f.text_field :type_list, value: @store.type_list.join(','),class: "p" %>
+							<%= f.text_field :type_list, value: @store.type_list.join(','), placeholder: "猫カフェ,猫,ねこカフェ,ねこ",class: "p" %>
 							<div class="p">city_list タグをカンマ区切りで入力</div>
-							<%= f.text_field :city_list, value: @store.city_list.join(','),class: "p" %>
+							<%= f.text_field :city_list, value: @store.city_list.join(','), placeholder: "東京,新宿",class: "p" %>
 							<%= f.submit "Edit",class: "btn-edit btn btn-light btn-lg ml-3" %>
 						<% end %>
 					</div>
