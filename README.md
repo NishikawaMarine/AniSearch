@@ -41,7 +41,7 @@ rails 5.2.4
 
  <img src="/public/images/login.png" width=70%>
 
- 									↓
+###					↓
 
  <img src="/public/images/newpost.png" width=70%>
 
