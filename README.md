@@ -24,7 +24,7 @@ rails 5.2.4
  動物カフェのタイプと場所で絞り込んで検索することができます。
  (例：猫カフェ×東京都で検索 → 東京都にある猫カフェが検索一覧で表示される)
 
- <img src="/public/images/search.png" width=70%>
+ <img src="/public/images/search1.png" width=70%>
 
  検索一覧で表示された、お店の情報の部分をクリックするとお店の詳細な情報が見れます。
 
