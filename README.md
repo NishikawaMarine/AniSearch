@@ -41,8 +41,6 @@ rails 5.2.4
 
  <img src="/public/images/login.png" width=70%>
 
-###					↓
-
  <img src="/public/images/newpost.png" width=70%>
 
  また編集したい時は、一覧画面からお店の情報をクリックし詳細画面にいきます。
