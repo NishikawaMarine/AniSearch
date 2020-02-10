@@ -23,13 +23,16 @@ rails 5.2.4
 
  動物カフェのタイプと場所で絞り込んで検索することができます。
  (例：猫カフェ×東京都で検索 → 東京都にある猫カフェが検索一覧で表示される)
- <img src="/public/images/search.png" width=50%>
+
+ <img src="/public/images/search.png" width=70%>
 
  検索一覧で表示された、お店の情報の部分をクリックするとお店の詳細な情報が見れます。
- <img src="/public/images/search_list.png" width=50%>
+
+ <img src="/public/images/search_list.png" width=70%>
 
  またトップ画面に戻りたいときは、サイト名の(AniSearch)の部分を押すと戻れます。
- <img src="/public/images/AniSearch.png" width=50%>
+
+ <img src="/public/images/AniSearch.png" width=70%>
 
  トップ画面も検索一覧と同様、お店情報の部分をクリックと詳細な情報が見れます。
 
