@@ -25,7 +25,6 @@ rails 5.2.4
  (例：猫カフェ×東京都で検索 → 東京都にある猫カフェが検索一覧で表示される)
 
  ![テキスト](/public/images/search.png)
- <img src="/public/images/search.png" width="500px">
 
  検索一覧で表示された、お店の情報の部分をクリックするとお店の詳細な情報が見れます。
 
