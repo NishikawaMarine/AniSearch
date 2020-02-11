@@ -11,10 +11,11 @@
 						<table class="table table-index table-hover text-white">
 							<tbody>
 								<tr>
-									<td><%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "index-img" %>
+									<td class="align-middle mx-auto"><%= attachment_image_tag store, :image, format: 'jpg', fallback: "/images/no_image.jpg",class: "index-img" %>
 									</td>
 									<td class="align-middle text-center index-store-name"><%= store.store_name %></td>
-									<td class="align-middle text-center index-store-address"><i class="fas fa-map-marker-alt mr-3"></i><%= store.address %></td>
+									<td class="align-middle text-center index-store-address">
+										<i class="fas fa-map-marker-alt mr-1"></i><%= store.address %></td>
 									<td class="align-middle index-store-tag">
 										<% store.type_list.each do |type| %>
 											<span class="badge tag"><%= type %></span>
