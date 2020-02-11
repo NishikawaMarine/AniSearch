@@ -22,6 +22,7 @@ rails 5.2.4
 ## 使い方
 
 動物カフェのタイプと場所で絞り込んで検索することができます。
+
 (例：猫カフェ×東京で検索 → 東京にある猫カフェが検索一覧で表示される)
 
 <img src="/public/images/search1.png" width=70%>
@@ -38,12 +39,15 @@ rails 5.2.4
 
 
 管理者ログイン画面URL:(https://anisearch.site/admins/sign_in)
+
 管理者画面の方ではログインした後、
+
 ヘッダーにある(Newpost)のボタンを押すと新規投稿画面になり、お店情報を投稿できるようになっています。
 
 <img src="/public/images/newpost.png" width=70%>
 
 また編集したい時は、一覧画面からお店の情報をクリックし詳細画面にいきます。
+
 詳細画面には(Edit)ボタンと(Delete)ボタンがあるので、そこから編集と削除ができます。
 
 <img src="/public/images/edit_delete.png" width=70%>
