@@ -41,7 +41,7 @@ rails 5.2.4
 
 ### 管理者側
 
-[管理者ログイン画面URL](https://anisearch.site/admins/sign_in)
+管理者ログイン画面URL:(https://anisearch.site/admins/sign_in)
 
 管理者画面の方ではログインした後、
 ヘッダーにある(Newpost)のボタンを押すと新規投稿画面になり、お店情報を投稿できるようになっています。
