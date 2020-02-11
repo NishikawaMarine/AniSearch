@@ -36,15 +36,17 @@ rails 5.2.4
 
  トップ画面も検索一覧と同様、お店情報の部分をクリックと詳細な情報が見れます。
 
+
  管理者画面の方ではログインした後、ヘッダーにある(Newpost)のボタンを押すと新規投稿画面になり
  お店情報を投稿できるようになっています。
-
- <img src="/public/images/login.png" width=70%>
 
  <img src="/public/images/newpost.png" width=70%>
 
  また編集したい時は、一覧画面からお店の情報をクリックし詳細画面にいきます。
  詳細画面には(Edit)ボタンと(Delete)ボタンがあるので、そこから編集と削除ができます。
+
+ <img src="/public/images/edit_delete.png" width=70%>
+
  トップ画面に戻りたいときは、先程と同様サイト名の(AniSearch)の部分を押すと戻れます。
 
 ## URL
