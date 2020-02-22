@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   	get 'admin/edit' => 'devise/registerations#edit', :as => 'edit_admin_registeration'
   	put 'admin' => 'devise/registerations#update', :as => 'admin_registeration'
   end
-  devise_for :installs
   root 'homes#top'
   get 'homes/about'
   resources :stores
